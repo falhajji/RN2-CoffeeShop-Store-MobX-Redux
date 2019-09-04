@@ -25,7 +25,7 @@ class Login extends Component {
             <Body>
               <Form>
                 <Body>
-                  <Label style={{ color: "white" }}>Username</Label>
+                  <Label style={{ color: "black" }}>Username</Label>
                 </Body>
                 <Item
                   rounded
@@ -38,7 +38,7 @@ class Login extends Component {
                   <Input autoCorrect={false} autoCapitalize="none" />
                 </Item>
                 <Body>
-                  <Label style={{ color: "white" }}>Password</Label>
+                  <Label style={{ color: "black" }}>Password</Label>
                 </Body>
                 <Item
                   rounded
@@ -53,10 +53,18 @@ class Login extends Component {
               </Form>
             </Body>
           </ListItem>
-          <Button full success>
+          <Button
+            full
+            success
+            onPress={() => this.props.navigation.navigate("CoffeeList")}
+          >
             <Text>Login</Text>
           </Button>
-          <Button full warning>
+          <Button
+            full
+            warning
+            onPress={() => this.props.navigation.navigate("CoffeeList")}
+          >
             <Text>Register</Text>
           </Button>
         </List>

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { ImageBackground, View } from "react-native";
+import { withNavigation } from "react-navigation";
 
 // NativeBase Components
 import { ListItem, Card, CardItem, Thumbnail, Text, Left } from "native-base";
@@ -9,7 +10,7 @@ import styles from "./styles";
 
 class CoffeeItem extends Component {
   handlePress = () => {
-    alert("Pressed");
+    navigation.navigate("CoffeeDetail", { cofeeShopID: coffeeShop.id });
   };
   render() {
     const { coffeeShop } = this.props;
@@ -38,4 +39,4 @@ class CoffeeItem extends Component {
   }
 }
 
-export default CoffeeItem;
+export default withNavigation(CoffeeItem);
